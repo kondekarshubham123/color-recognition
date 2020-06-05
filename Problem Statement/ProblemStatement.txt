@@ -1,0 +1,13 @@
+PROBLEM STATEMENT
+
+
+
+
+Interns are expected to create a TensorFlow model for identification of color. 
+Your code will be given an image as an input and the code is supposed to categorize 
+which RGB clour it matches to. This code is to be done in Python.
+
+
+
+On completion, create a Github account and create a repository and commit your code 
+in the same.
