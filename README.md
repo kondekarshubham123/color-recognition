@@ -1,5 +1,18 @@
 ## Welcome color-recognition repo
 
+This model can only recognise the following colours
+```
+1. Red
+2. Blue
+3. Orange
+4. Green
+5. Yellow
+6. Indigo
+7. Voilet
+```
+
+
+
 ### Problem Statement
 
 ```markdown
@@ -36,10 +49,12 @@ Using generated dataset I have trained a keras-tf model which is located in `src
 ```markdown
 To use this model we need to put input image file on src folder
 
-and in `code.py` give input of file name to **`line no 17`**
+and in `code.py` give input of file name to `line no 17`
 
 Run file
-    `python code.py`
+
+
+`python code.py`
 ```
 
 ### End
