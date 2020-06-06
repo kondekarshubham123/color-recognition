@@ -1,37 +1,49 @@
-## Welcome to GitHub Pages
+## Welcome color-recognition repo
 
-You can use the [editor on GitHub](https://github.com/kondekarshubham123/color-recognition/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### Problem Statement
 
 ```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+Interns are expected to create a TensorFlow model for identification of color. 
+Your code will be given an image as an input and the code is supposed to categorize 
+which RGB clour it matches to. This code is to be done in Python.
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+### Solution
 
-### Jekyll Themes
+For implemention of this project we need dataset.
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/kondekarshubham123/color-recognition/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+So color dataset I have created using numpy and RGB color codes
 
-### Support or Contact
+#### Code for Dataset genrator is located in following directory
+```markdown
+    color-recognition/Dataset/DatasetGenerator/
+```
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+#### Generation dataset and Model training
+
+To Generate dataset type following command
+
+`python Generate.py`
+
+this ll generate dataset and stored in test dir which is **located in DataGenerator**.
+
+Using generated dataset I have trained a keras-tf model which is located in `src/keras_model.h5`
+
+`keras_model.h5` is the trained model by tensorflow.
+
+### Use
+
+```markdown
+To use this model we need to put input image file on src folder
+
+and in `code.py` give input of file name to **`line no 17`**
+
+Run file
+    `python code.py`
+```
+
+### End
+
+All done !!
+
+Predicted output will be shown to you
