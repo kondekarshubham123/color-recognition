@@ -42,4 +42,4 @@ Label = ["Red","Green","Blue","Orange","Yellow","Voilet","Indigo"]
 prediction = list(zip(prediction[0],Label))
 
 
-print(max(prediction))
+print("Model Prediction is {0} color.".format(max(prediction)))

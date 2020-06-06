@@ -6,4 +6,3 @@ Green       | [0,random.randint(150,255),0]                                     
 Voilet      | [random.randint(230,245),random.randint(120,140),random.randint(230,245)] | [238,130,238] |
 Indigo      | [random.randint(70,85) , 0, random.randint(120,140)]                      | [75,0,130]    |
 Yellow      | [random.randint(200,256),random.randint(200,256),0]                       | [255,255,0]   |
----------------------------------------------------------------------------------------------------------
