@@ -44,6 +44,15 @@ Using generated dataset I have trained a keras-tf model which is located in `src
 
 `keras_model.h5` is the trained model by tensorflow.
 
+### Requirement for this model are
+```
+python3.X
+tensorflow
+pillow library
+matplotlib library
+```
+
+
 ### Use
 
 ```markdown
@@ -57,7 +66,7 @@ Run file
 `python code.py`
 ```
 
-### End
+### Thank you
 
 All done !!
 
