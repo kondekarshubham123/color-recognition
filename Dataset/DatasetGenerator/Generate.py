@@ -12,6 +12,7 @@ class Generator():
     def __init__(self,color,height=height,width=width,pixel=pixel):
         self.IPcolor = color
         self.lookup = {}
+        self.look = {}
         self.color = []
         self.Gen = []
         self.rgb = []
@@ -28,16 +29,21 @@ class Generator():
             self.lookup[col] = ge
         # return self.lookup[self.IPcolor]
 
+
+    def sample(self):
+        for col,sam in list(zip(self.color,self.rgb)):
+            self.look[col] = sam
+        exec('self.var = ' + self.look[self.IPcolor])
+        self.array[:,:] = self.var
+        img = Image.fromarray(self.array)
+        img.save("../test/"+self.IPcolor+"/"+self.IPcolor+'-!-'+"Sample" +".png")
+
     def GenerateData(self,val):
         for i in range(0,val):
             exec('self.var = ' + self.lookup[self.IPcolor])
             self.array[:,:] = self.var
             img = Image.fromarray(self.array)
             img.save("../test/"+self.IPcolor+"/"+self.IPcolor+'-!-'+str(i) +".png")
-
-        # array[:,:] = [255,255,0]
-        # img = Image.fromarray(array)
-        # img.save("Yellow/colorYellow2.png")
 
 
 
@@ -51,18 +57,33 @@ Color5 = Generator("Voilet")
 Color6 = Generator("Indigo")
 Color7 = Generator("Yellow")
 
-Color1.setRGB() 
-Color2.setRGB()
-Color3.setRGB()
-Color4.setRGB()
-Color5.setRGB()
-Color6.setRGB()
-Color7.setRGB()
+for i in range(1,8):
+    exec("Color"+str(i)+".setRGB()")
+    exec("Color"+str(i)+".sample()")
+    exec("Color"+str(i)+".GenerateData(25)")
 
-Color1.GenerateData(25)
-Color2.GenerateData(25)
-Color3.GenerateData(25)
-Color4.GenerateData(25)
-Color5.GenerateData(25)
-Color6.GenerateData(25)
-Color7.GenerateData(25)
+
+# Color1.setRGB() 
+# Color2.setRGB()
+# Color3.setRGB()
+# Color4.setRGB()
+# Color5.setRGB()
+# Color6.setRGB()
+# Color7.setRGB()
+
+# Color1.sample()
+# Color2.sample()
+# Color3.sample()
+# Color4.sample()
+# Color5.sample()
+# Color6.sample()
+# Color7.sample()
+
+
+# Color1.GenerateData(25)
+# Color2.GenerateData(25)
+# Color3.GenerateData(25)
+# Color4.GenerateData(25)
+# Color5.GenerateData(25)
+# Color6.GenerateData(25)
+# Color7.GenerateData(25)
