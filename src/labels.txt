@@ -1,0 +1,7 @@
+0 Red
+1 Green
+2 Blue
+3 Orange
+4 Yellow
+5 Voilet
+6 Indigo
